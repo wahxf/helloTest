@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" id="viewport" content="width=720, user-scalable=no">
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.section .box {
+			    overflow: inherit;
+			    position: relative;
+			    width: 720px;
+			    height: 1280px;
+			    transform-origin: 50% 0;
+			}
+			.fp-tableCell {
+			    display: table-cell;
+			    vertical-align: middle;
+			    width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="section section-2 fp-section fp-table active" style="display: table;">
+			<div class="fp-tableCell">
+            <div class="content">
+                <div class="bottom"></div>
+                <div class="box">
+                </div>
+            </div>
+
+        </div></section>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(function(){
+//			var h = window.screen.width;
+//			var _h = window.document.body.offsetWidth;
+//			var a = document.documentElement.clientHeight;
+//			var b = $(window).height();
+//			console.log(b);
+//			console.log(a);
+//			console.log(h);
+//			console.log(_h);
+			//-----------------------适配--------------------
+//		    var height=window.screen.height;
+		    var height = $(window).height();
+		    var width =window.screen.width;
+		    var sc = height/1280;
+//		    var _height = sc*height;
+//		    console.log(_height);
+		   	$(".content").css("height",height);
+		    var scale=height/1280;
+		    console.log(height);
+		    console.log(sc);
+		    $(".box").css("transform","scale("+scale+")");
+		    $(".box").css("-webkit-transform","scale("+scale+")");
+		})
+	</script>
+</html>
